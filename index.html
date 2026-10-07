@@ -1,97 +1,317 @@
 <!DOCTYPE html>
 <html lang="ha">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALH.NAKOFA TV - Gidan Kallon Bidiyoyi da Labarai</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-        }
-        header {
-            background-color: #ff0000;
-            color: white;
-            padding: 20px 0;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #ff0000;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            padding-top: 30px;
-            height: 0;
-            overflow: hidden;
-            margin: 20px 0;
-            border-radius: 8px;
-            background: #000;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #ff0000;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-        .btn:hover {
-            background-color: #cc0000;
-        }
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            font-size: 14px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ALH.NAKOFA TV — Labarai da Dumi-Duminsu</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+    color:#111;
+}
+
+header{
+    background:#d40000;
+    color:white;
+    padding:18px;
+    text-align:center;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+}
+
+.tagline{
+    font-size:13px;
+    margin-top:5px;
+}
+
+nav{
+    background:#111;
+    display:flex;
+    overflow-x:auto;
+    padding:10px;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:9px 14px;
+    background:#222;
+    border-radius:20px;
+    white-space:nowrap;
+    font-size:13px;
+}
+
+nav a.active{
+    background:#d40000;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:15px;
+}
+
+.breaking{
+    background:#d40000;
+    color:white;
+    padding:16px;
+    border-radius:10px;
+    margin-bottom:18px;
+}
+
+.breaking-title{
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.breaking-text{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.section-title{
+    margin:22px 0 12px;
+    font-size:21px;
+    border-left:5px solid #d40000;
+    padding-left:10px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:16px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.card h3{
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#555;
+    line-height:1.5;
+}
+
+.btn{
+    display:inline-block;
+    background:#d40000;
+    color:white;
+    text-decoration:none;
+    padding:10px 16px;
+    border-radius:6px;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+.video{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+    border-radius:10px;
+}
+
+.video-icon{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.category{
+    background:white;
+    padding:18px 10px;
+    text-align:center;
+    border-radius:9px;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+    font-weight:bold;
+}
+
+.category span{
+    display:block;
+    font-size:26px;
+    margin-bottom:7px;
+}
+
+.admin{
+    background:#222;
+    color:white;
+    padding:18px;
+    border-radius:10px;
+    margin-top:22px;
+}
+
+.admin a{
+    color:white;
+    text-decoration:none;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:30px;
+}
+
+.footer-title{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+@media(min-width:700px){
+    .categories{
+        grid-template-columns:repeat(4,1fr);
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        ALH.NAKOFA TV
-    </header>
+<header>
+    <div class="logo">🔴 ALH.NAKOFA TV</div>
+    <div class="tagline">Labarai da Dumi-Duminsu</div>
+</header>
 
-    <div class="container">
-        <h1>Barka da Zuwa ALH.NAKOFA TV</h1>
-        <p>Kalli sababbin bidiyoyi, labarai, da shirye-shirye masu ƙayatarwa kai tsaye daga tasharmu.</p>
-        
-        <!-- Wurin Saka Bidiyon YouTube (Zaka iya canza ID ɗin bidiyon daga baya) -->
-        <div class="video-container">
-            <iframe src="https://youtube.com" frameborder="0" allowfullscreen></iframe>
-        </div>
+<nav>
+    <a href="#" class="active">🏠 Home</a>
+    <a href="#breaking">🔴 Breaking</a>
+    <a href="#news">📰 Labarai</a>
+    <a href="#videos">🎥 Videos</a>
+    <a href="#live">📡 Live</a>
+    <a href="#categories">🌍 Categories</a>
+</nav>
 
-        <p>Domin samun sababbin shirye-shiryenmu akan lokaci, ziyarci tasharmu ta YouTube:</p>
-        <a href="https://youtube.com" target="_blank" class="btn">Kalli YouTube Channel ɗinmu</a>
+<div class="container">
+
+<section id="breaking" class="breaking">
+    <div class="breaking-title">🚨 BREAKING NEWS</div>
+    <div class="breaking-text">
+        ALH.NAKOFA TV — Labarai da Dumi-Duminsu.
+    </div>
+</section>
+
+<h2 class="section-title" id="news">📰 Sabbin Labarai</h2>
+
+<div class="card">
+    <h3>📰 Labarai da Dumi-Duminsu</h3>
+    <p>
+        Samu sabbin labarai daga Kano, Arewa,
+        Najeriya da sauran sassan duniya.
+    </p>
+    <a href="#" class="btn">Karanta Labari</a>
+</div>
+
+<h2 class="section-title" id="videos">🎥 Sabbin Bidiyoyi</h2>
+
+<div class="video">
+    <div class="video-icon">▶️</div>
+    <h2>ALH.NAKOFA TV Videos</h2>
+    <p style="margin-top:8px;">
+        Kalli sabbin shirye-shiryenmu da labarai.
+    </p>
+    <a href="#" class="btn">Kalli Bidiyo</a>
+</div>
+
+<h2 class="section-title" id="live">📡 ALH.NAKOFA TV Live</h2>
+
+<div class="card" style="text-align:center;">
+    <h3>🔴 Live Broadcast</h3>
+    <p>
+        Za mu kawo muku labarai da shirye-shirye
+        kai tsaye.
+    </p>
+    <a href="#" class="btn">🔴 Kalli Live</a>
+</div>
+
+<h2 class="section-title" id="categories">🌍 Rukunin Labarai</h2>
+
+<div class="categories">
+
+    <div class="category">
+        <span>🇳🇬</span>
+        Kasa
     </div>
 
-    <footer>
-        &copy; 2026 ALH.NAKOFA TV. Dukkan haƙƙoƙi sun adana.
-    </footer>
+    <div class="category">
+        <span>🏙️</span>
+        Kano
+    </div>
+
+    <div class="category">
+        <span>🌍</span>
+        Duniya
+    </div>
+
+    <div class="category">
+        <span>⚽</span>
+        Wasanni
+    </div>
+
+    <div class="category">
+        <span>🎙️</span>
+        Hira ta Musamman
+    </div>
+
+    <div class="category">
+        <span>📖</span>
+        Hadisi na Yau
+    </div>
+
+    <div class="category">
+        <span>💡</span>
+        Nasiha ta Yau
+    </div>
+
+    <div class="category">
+        <span>🎬</span>
+        Nishadi
+    </div>
+
+</div>
+
+<div class="admin">
+    ⚙️ <strong>Admin Dashboard</strong>
+    <br><br>
+    <a href="#">Shiga Admin Dashboard →</a>
+</div>
+
+</div>
+
+<footer>
+    <div class="footer-title">
+        ALH.NAKOFA TV
+    </div>
+
+    <p>
+        Labarai da Dumi-Duminsu
+    </p>
+
+    <p style="margin-top:12px;font-size:13px;">
+        © 2026 ALH.NAKOFA TV. Dukkan haƙƙoƙi sun adana.
+    </p>
+</footer>
 
 </body>
 </html>
