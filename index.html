@@ -200,8 +200,29 @@ footer{
     <a href="#news">📰 Labarai</a>
     <a href="#videos">🎥 Videos</a>
     <a href="#live">📡 Live</a>
+    <a href="#categories">🌍 Categories</a><nav>
+    <a href="#" class="active">🏠 Home</a>
+    <a href="#breaking">🔴 Breaking</a>
+    <a href="#news">📰 Labarai</a>
+    <a href="#videos">🎥 Videos</a>
+    <a href="#live">📡 Live</a>
     <a href="#categories">🌍 Categories</a>
 </nav>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔎 Nemi labari...">
+    <button onclick="searchNews()">Nema</button>
+</div>
+
+<script>
+function searchNews() {
+    const search = document.getElementById("searchInput").value.trim();
+
+    if (search !== "") {
+        window.location.href = "news.html";
+    }
+}
+</script>
 
 <div class="container">
 
